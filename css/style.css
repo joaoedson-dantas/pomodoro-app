@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open sans", sans-serif;
+  background: #0e1428; /* fallback for old browsers */
+  color: #fff;
+  padding: 20px;
+}
+
+header {
+  text-align: end;
+}
+.settings i {
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.settings i:hover {
+  transform: rotate(90deg);
+}
+.containerRelogio.none {
+  display: none;
+}
+
+.containerRelogio {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.sessiontype {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sessiontype h1 {
+  font-size: 18px;
+  background-color: #242424;
+  text-align: center;
+  padding: 4px 4px;
+  border-radius: 6px;
+}
+
+.timerCicle p {
+  font-size: 64px;
+}
+
+.start {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.relogioAcao {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background-color: #0e1428;
+  border-radius: 50%;
+}
+
+.relogioAcao::before {
+  content: "";
+  position: absolute;
+  /*   top: -3.1px;
+  left: -2.9px; */
+  height: 310px;
+  width: 310px;
+  border-radius: 50%;
+  background-color: rgba(6, 1, 29, 0.56);
+  box-shadow: rgba(6, 1, 29, 0.56) 0px 22px 70px 4px;
+  z-index: -1;
+  /*   animation: animate 3s linear infinite; */
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg) brightness(100%) blur(10px);
+  }
+  100% {
+    filter: hue-rotate(360deg) brightness(100%) blur(10px);
+  }
+}
+
+/* Modal config */
+
+.modalContainer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modalContainer.ativo {
+  display: flex;
+}
+.modal {
+  background-color: #000;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  gap: 30px;
+  border-radius: 12px;
+}
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+select {
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: none !important;
+  background: #0e1428;
+  background-image: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modalItens {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#button {
+  border: none;
+  appearance: none;
+  background-color: #0c5425;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#btnSetConfig {
+  border: none;
+  appearance: none;
+  background: transparent;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* JS */
+
+.timerCicle.ativo {
+  display: none;
+}
+
+.titleSection.ativo {
+  background-color: #0c5425;
+}
+
+.sessoes.ativo {
+  font-size: 32px;
+  color: #0c5425;
+}

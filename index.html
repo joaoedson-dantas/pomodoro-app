@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro APP</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- icons -->
+  <script src="https://kit.fontawesome.com/cd943ed380.js" crossorigin="anonymous" defer></script>
+
+  <!-- ScriptJs -->
+  <script src="./js/app.js" defer></script>
+
+</head>
+
+<body>
+
+  <header> <!-- Vai ser um modal -->
+    <div class="settings">
+      <i onclick="ativarConfig()" id="configIcon" class="fa-solid fa-gear"></i>
+    </div>
+  </header>
+  <main class="containerRelogio">
+    <div class="sessiontype">
+      <h1 class="titleSection" id="titleSection">WORK</h1>
+      <p class="sessoes" id="sessoes">Nome da tarefa</p>
+    </div>
+    <!-- Relogio  -->
+    <div class="timerCicle">
+      <div class="relogioAcao">
+        <p id="minutos_ok"></p>
+        <p>:</p>
+        <p id="segundos_ok"></p>
+      </div>
+    </div>
+    <div class="start">
+      <button id="btnSetConfig" onclick="startPomdoro()">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </main>
+  <!--  -->
+  <div class="modalContainer" id="modalConfig">
+    <div class="modal">
+      <h2>Durações</h2>
+      <form id="duracao">
+        <div class="modalItens">
+          <h3>Ciclo</h3>
+          <label for="ciclo"> A duração recomendada é de 25 minutos</label>
+          <select name="ciclo" id="ciclo">
+            <option value="1">1 Minuto</option>
+            <option value="10">10 Minutos</option>
+            <option value="25">25 Minutos (padrão)</option>
+            <option value="30">30 Minutos</option>
+            <option value="35">35 Minutos</option>
+            <option value="40">40 Minutos</option>
+            <option value="45">45 Minutos</option>
+            <option value="50">50 Minutos</option>
+            <option value="55">55 Minutos</option>
+            <option value="60">60 Minutos</option>
+          </select>
+        </div>
+        <div class="modalItens">
+          <h3>Intervalo curto</h3>
+          <label for="intervalCurto"> A duração recomendada é de 5 minutos</label>
+          <select name="intervalCurto" id="intervalCurto">
+            <option value="1">1 Minuto</option>
+            <option value="3">3 Minutos</option>
+            <option value="5">5 Minutos(padrão)</option>
+            <option value="10">10 Minutos </option>
+          </select>
+        </div>
+        <div class="modalItens">
+          <h3>Intervalo Longo</h3>
+          <label for="intervalLong"> A duração recomendada é de 30 minutos</label>
+          <select name="intervalLong" id="intervalLong">
+            <option value="1">1 Minuto</option>
+            <option value="15">15 Minutos</option>
+            <option value="20">20 Minutos</option>
+            <option value="25">25 Minutos </option>
+            <option value="30">30 Minutos (padrão)</option>
+            <option value="35">35 Minutos</option>
+            <option value="40">40 Minutos</option>
+          </select>
+        </div>
+        <button onclick="setLocal()" id="button">Salvar</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
