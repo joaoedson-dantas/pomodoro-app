@@ -6,7 +6,7 @@
 
 body {
   font-family: "Open sans", sans-serif;
-  background: #0e1428; /* fallback for old browsers */
+  background: #0e1428; /* fallback for old browsers E84855*/
   color: #fff;
   padding: 20px;
 }
@@ -72,15 +72,15 @@ header {
 .relogioAcao::before {
   content: "";
   position: absolute;
-  /*   top: -3.1px;
-  left: -2.9px; */
   height: 310px;
   width: 310px;
   border-radius: 50%;
   background-color: rgba(6, 1, 29, 0.56);
   box-shadow: rgba(6, 1, 29, 0.56) 0px 22px 70px 4px;
   z-index: -1;
-  /*   animation: animate 3s linear infinite; */
+}
+.relogioAcao.ativo::before {
+  animation: animate 3s linear infinite;
 }
 
 @keyframes animate {
